@@ -1,7 +1,9 @@
 # 接单管理系统 项目说明文档
 
+![](./assets/image.png)
+
 ## 项目结构
-```
+```tree
 E:/2025/work/new/vite/order/
 ├── app.exe                  # Windows 可执行文件
 ├── app_linux                # Linux 可执行文件
