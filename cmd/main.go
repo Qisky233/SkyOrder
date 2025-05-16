@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"order/internal/database"
+	"order/internal/middleware"
 	"order/internal/router"
 
 	"github.com/gin-gonic/gin"
@@ -32,6 +33,7 @@ func main() {
 
 	// 注册路由
 	router.RegisterRoutes(r)
+	r.Use(middleware.Cors())
 
 	port := viper.GetString("server.port")
 

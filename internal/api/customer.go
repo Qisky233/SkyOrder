@@ -60,6 +60,22 @@ func (h *CustomerHandler) GetCustomer(c *gin.Context) {
 	})
 }
 
+func (h *CustomerHandler) GetAllCustomers(c *gin.Context) {
+	customers, err := h.customerService.GetAllCustomers()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"code":    1005,
+			"message": err.Error(),
+		})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"code": 200,
+		"data": customers,
+	})
+}
+
 func (h *CustomerHandler) UpdateCustomer(c *gin.Context) {
 	id, _ := strconv.ParseUint(c.Param("id"), 10, 32)
 	var customer model.Customer

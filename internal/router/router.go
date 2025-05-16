@@ -55,6 +55,7 @@ func RegisterRoutes(r *gin.Engine) {
 		customer.Use(middleware.JWTAuth())
 		{
 			customer.POST("", customerHandler.CreateCustomer)
+			customer.GET("", customerHandler.GetAllCustomers)
 			customer.GET("/:id", customerHandler.GetCustomer)
 			customer.PUT("/:id", customerHandler.UpdateCustomer)
 			customer.DELETE("/:id", customerHandler.DeleteCustomer)

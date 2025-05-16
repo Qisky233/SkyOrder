@@ -29,6 +29,15 @@ func (s *CustomerService) GetCustomer(id uint) (*model.Customer, error) {
 	return &customer, nil
 }
 
+func (s *CustomerService) GetAllCustomers() ([]model.Customer, error) {
+	var customers []model.Customer
+	result := database.DB.Find(&customers)
+	if result.Error != nil {
+		return nil, result.Error
+	}
+	return customers, nil
+}
+
 func (s *CustomerService) UpdateCustomer(id uint, customer *model.Customer) error {
 	return database.DB.Model(&model.Customer{}).Where("id = ?", id).Updates(customer).Error
 }
