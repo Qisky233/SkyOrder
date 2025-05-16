@@ -1,5 +1,7 @@
 # 接单管理系统 项目说明文档
 
+![](./assets/ui.png)
+![](./assets/dashboard.png)
 ![](./assets/image.png)
 
 ## 项目结构
