@@ -29,35 +29,4 @@ E:/2025/work/new/vite/order/
 运行以下命令：
 ```bash
 ./app_linux
-``` 项目说明文档
-
-## 项目目录
-```
-/e:/2025/work/new/vite/order/
-```
-
-## 项目结构
-```
-/e:/2025/work/new/vite/order/
-├── app.exe          # Windows 可执行文件
-├── app_linux        # Linux 可执行文件
-├── src/             # 源代码目录
-│   ├── main.js      # 主程序入口
-│   ├── utils.js     # 工具函数
-│   └── config.js    # 配置文件
-├── assets/          # 静态资源目录
-│   ├── images/      # 图片资源
-│   └── styles/      # 样式文件
-└── README.md        # 项目说明文档
-```
-
-## 使用说明
-
-### Windows
-直接双击运行 `app.exe` 即可。
-
-### Linux
-运行以下命令：
-```bash
-./app_linux
-```
+``` 
