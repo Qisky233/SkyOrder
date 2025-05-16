@@ -1,0 +1,11 @@
+server:
+  port: 3000
+  mode: release  # debug or release
+
+database:
+  driver: sqlite3
+  path: ./data.db
+  
+jwt:
+  secret: "@Inc123456."
+  expire: 1h  # token过期时间
